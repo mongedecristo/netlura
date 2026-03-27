@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #141414;
+  --text: #ffffff;
+  --accent: #e50914;
+  --surface: #333333;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --radius: 4px;
+}
+
+.light-mode {
+  --bg: #ffffff;
+  --text: #000000;
+  --surface: #f0f0f0;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--text);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profiles ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s ease;
+}
+
+.profile figure {
+  width: 138px;
+  height: 138px;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.profile:hover figure,
+.profile:focus figure {
+  border-color: var(--accent);
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.4);
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile figcaption {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .profiles {
+    gap: 1.5rem;
+  }
+  .profile figure {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: #b20710;
+}
