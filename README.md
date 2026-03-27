@@ -38,6 +38,25 @@ Netlura é uma aplicação front-end criada durante a Imersão Dev Alura - Com I
 O projeto está publicado no GitHub Pages:
 - https://mongedecristo.github.io/netlura/
 
+### 🔧 Passo a passo do deploy no GitHub Pages
+1. Crie o repositório no GitHub com nome `netlura`.
+2. Commit e push do código:
+   ```bash
+   git add .
+   git commit -m "Deploy inicial"
+   git push origin main
+   ```
+3. No GitHub, vá em Settings > Pages.
+4. Em Source, selecione a branch `main` e `/ (root)`.
+5. Salve e aguarde a URL estar ativa.
+
+## 🛠️ Próximas melhorias sugeridas
+- Busca local por título, gênero ou ano
+- Paginação ou scroll infinito no catálogo
+- Modo dark/light toggle
+- Carrossel com transição suave e autoplay
+- Modal com detalhes do filme
+
 ## 💡 Inspiração
 
 Netlura foi criado com base na ideia de parecer e lembrar o estilo de navegação e UX da Netflix, com foco em:
