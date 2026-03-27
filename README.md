@@ -1,6 +1,6 @@
 # 🎬 Netlura
 
-![Banner](https://raw.githubusercontent.com/mongedecristo/netlura/main/assets/banner.png)
+![Banner](https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg)
 
 Projeto inspirado na proposta da Netflix, com catálogo de filmes e séries, design responsivo e carrossel de cards.
 
